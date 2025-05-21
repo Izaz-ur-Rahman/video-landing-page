@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Dot Productions</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    body {
+  overflow-x: hidden;
+}
+
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Hero Section -->
+  <!-- Hero Section with Video Background -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background Video -->
+  <div class="absolute inset-0 z-0">
+  <iframe
+    src="https://vimeo.com/1073372328"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    allowfullscreen
+    class="w-full h-full absolute top-0 left-0 object-cover">
+  </iframe>
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+</div>
+
+
+  <div class="relative z-10 container mx-auto px-6 lg:flex lg:justify-between lg:items-center">
+    <div class="text-white max-w-xl">
+      <img src="logo.png" alt="Blue Dot Productions" class="mb-4 w-48">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Videos That Help Your Business Grow</h1>
+      <p class="mb-6">We create high-quality, story-driven videos for TV, web, and social. From concept to delivery, we help your business reach the right people.</p>
+      <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600">Call us now</a>
+      <div class="mt-4">
+        <img src="google-rating.png" alt="5-star Google rating" class="w-32">
+      </div>
+    </div>
+
+    <form id="contact" class="bg-white p-6 rounded shadow max-w-md w-full mt-12 lg:mt-0">
+      <h2 class="text-xl font-bold mb-4">Together Let's Tell Their Story</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <input type="text" placeholder="First name *" class="border p-2" required>
+        <input type="text" placeholder="Family name *" class="border p-2" required>
+        <input type="text" placeholder="Company name *" class="border p-2" required>
+        <input type="text" placeholder="Phone number *" class="border p-2" required>
+      </div>
+      <input type="file" class="mt-4 mb-2">
+      <textarea placeholder="Message *" class="border p-2 w-full mb-4" required></textarea>
+      <div class="g-recaptcha mb-4" data-sitekey="your-site-key"></div>
+      <button type="submit" class="bg-green-500 text-white w-full py-2 rounded">Submit</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Dynamically switch background video source based on screen size
+  const videoSource = document.getElementById('videoSource');
+  const bgVideo = document.getElementById('bgVideo');
+
+  const mobileVideo = 'https://vimeo.com/993299490'; // You can replace this with your mobile video
+  const desktopVideo = 'https://vimeo.com/1073372328'; // Replace this with your desktop video
+
+  function setVideoSource() {
+    const isMobile = window.innerWidth <= 768;
+    videoSource.src = isMobile ? mobileVideo : desktopVideo;
+    bgVideo.load();
+  }
+
+  setVideoSource();
+  window.addEventListener('resize', setVideoSource);
+</script>
+
+
+  <!-- Why Choose Us -->
+ <section class="py-16 px-6 bg-gray-100">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start text-left gap-10">
+
+    <!-- Video on the left -->
+    <div class="w-full md:w-1/2">
+      <video class="w-full rounded shadow" controls>
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Content on the right -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-3xl font-bold mb-6 text-center md:text-left">Why Businesses Choose Us?</h2>
+      <ul class="list-disc list-inside space-y-4">
+        <li><strong>Everything in One Place:</strong> Strategy, scripting, filming, and editing.</li>
+        <li><strong>Clear, Honest Storytelling:</strong> No over-the-top jargon.</li>
+        <li><strong>Strategic Design:</strong> Tailored content for results.</li>
+        <li><strong>Good Value, Real Results:</strong> High-quality, cost-effective content.</li>
+      </ul>
+      <div class="mt-6 text-center md:text-left">
+        <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600">Contact us now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Logos Carousel -->
+  <section class="py-10 bg-white">
+    <div class="swiper-container px-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/logos/888_Holdings-Logo.wine.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/Google.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/Intermediate_Capital_Group_logo.svg.png" class="h-12 mx-auto"></div>
+               <div class="swiper-slide"><img src="./images/logos/Juvae.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/Mandala.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/Maserati-Logo.png" class="h-12 mx-auto"></div>       <div class="swiper-slide"><img src="./images/logos/Melodie-logo-transparent.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/new-UNSW-logo-png-horizontal-crest.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/OperaHouse.png" class="h-12 mx-auto"></div>       <div class="swiper-slide"><img src="./images/logos/Pacco Rabane.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/Soudcoh.png" class="h-12 mx-auto"></div>
+        <div class="swiper-slide"><img src="./images/logos/Usid.png" class="h-12 mx-auto"></div>
+                <div class="swiper-slide"><img src="./images/logos/UTS_Logo_Full.png" class="h-12 mx-auto"></div>
+                                <div class="swiper-slide"><img src="./images/logos/logo10.png" class="h-12 mx-auto"></div>
+
+        <!-- Add more logos -->
+      </div>
+    </div>
+  </section>
+<style>
+  /* Container to show exactly 4 boxes */
+  #slider {
+    width: calc(4 * 16rem + 3 * 1.5rem); /* 4 boxes + 3 gaps */
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  /* Box styles */
+  .box {
+    display: inline-block;
+    width: 16rem;
+    margin-right: 1.5rem; /* gap */
+    background: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    padding: 1rem;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .box:last-child {
+    margin-right: 0; /* no gap on last box */
+  }
+
+  /* Image zoom on hover */
+  .box img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .box img:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<section class="py-16 px-6 bg-blue-100">
+  <h2 class="text-3xl font-bold mb-6 text-center">Your New Video Production Company Partner</h2>
+
+  <div id="slider">
+    <!-- Boxes repeated twice for seamless scroll -->
+    <div class="box">
+      <img src="./images/1.jpg" alt="TV Commercials" />
+      <h3 class="font-bold mb-2">TV Commercials</h3>
+      <p>Extensive reach and high visibility</p>
+    </div>
+    <div class="box">
+      <img src="./images/2.jpg" alt="Social Media" />
+      <h3 class="font-bold mb-2">Social Media</h3>
+      <p>Tailored for web and engagement</p>
+    </div>
+    <div class="box">
+      <img src="./images/3.jpg" alt="Animations" />
+      <h3 class="font-bold mb-2">Animations</h3>
+      <p>Creative and illustrative storytelling</p>
+    </div>
+    <div class="box">
+      <img src="./images/4.jpg" alt="Tutorials" />
+      <h3 class="font-bold mb-2">Tutorials</h3>
+      <p>Educate and empower viewers</p>
+    </div>
+    <div class="box">
+      <img src="./images/4.jpg" alt="Tutorials" />
+      <h3 class="font-bold mb-2">Tutorials</h3>
+      <p>Educate and empower viewers</p>
+    </div>
+    <!-- Duplicate for infinite scrolling -->
+    <div class="box">
+      <img src="./images/1.jpg" alt="TV Commercials" />
+      <h3 class="font-bold mb-2">TV Commercials</h3>
+      <p>Extensive reach and high visibility</p>
+    </div>
+    <div class="box">
+      <img src="./images/2.jpg" alt="Social Media" />
+      <h3 class="font-bold mb-2">Social Media</h3>
+      <p>Tailored for web and engagement</p>
+    </div>
+    <div class="box">
+      <img src="./images/3.jpg" alt="Animations" />
+      <h3 class="font-bold mb-2">Animations</h3>
+      <p>Creative and illustrative storytelling</p>
+    </div>
+    <div class="box">
+      <img src="./images/4.jpg" alt="Tutorials" />
+      <h3 class="font-bold mb-2">Tutorials</h3>
+      <p>Educate and empower viewers</p>
+    </div>
+    <div class="box">
+      <img src="./images/4.jpg" alt="Tutorials" />
+      <h3 class="font-bold mb-2">Tutorials</h3>
+      <p>Educate and empower viewers</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.getElementById('slider');
+  const boxes = slider.querySelectorAll('.box');
+  const boxCount = boxes.length / 2; // half are duplicates
+  const boxWidth = boxes[0].offsetWidth;
+  const gap = parseInt(getComputedStyle(boxes[0]).marginRight) || 24;
+
+  const step = boxWidth + gap; // total width per box including gap
+  const totalScrollWidth = step * boxCount;
+
+  let position = 0;
+function slideStep() {
+  position += step;
+  if (position >= totalScrollWidth) {
+    position = 0;
+  }
+  slider.scrollTo({
+    left: position,
+    behavior: 'smooth',
+  });
+}
+
+setInterval(slideStep, 4000); // slower slide every 4 seconds
+
+</script>
+  <!-- Portfolio Videos -->
+  <section class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Work</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <iframe src="https://player.vimeo.com/video/123456789" class="w-full h-64" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/123456790" class="w-full h-64" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/123456791" class="w-full h-64" allowfullscreen></iframe>
+    </div>
+     <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <iframe src="https://player.vimeo.com/video/123456789" class="w-full h-64" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/123456790" class="w-full h-64" allowfullscreen></iframe>
+      <iframe src="https://vimeo.com/1071985074
+" class="w-full h-64" allowfullscreen></iframe>
+    </div>
+    <a href="#contact" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Book a FREE session now</a>
+  </section>
+
+  <section class="py-16 bg-gray-50 px-6 max-w-5xl mx-auto">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+      <!-- Left Video -->
+      <div class="w-full lg:w-1/2">
+        <iframe src="https://player.vimeo.com/video/820362994?h=0556bcdcdc" width="100%" height="300" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!-- Right Text -->
+      <div class="w-full lg:w-1/2">
+        <h2 class="text-3xl font-bold text-pink-300 mb-4">What do our clients say?</h2>
+        <p class="text-lg italic mb-2">“It's the most successful campaign for many years, our ads are standing out globally.”</p>
+        <p class="text-base font-semibold">Nick Street | Commercial Director | O’Brien</p>
+      </div>
+    </div>
+
+  <div class="relative overflow-hidden">
+    <div
+      id="testimonial-slider"
+      class="flex transition-transform duration-500 ease-in-out"
+      style="will-change: transform;"
+    >
+      <!-- Testimonials will be injected here by JS -->
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button
+      id="prevBtn"
+      class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-transparent text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600 focus:outline-none"
+      aria-label="Previous testimonial"
+    >‹</button>
+    <button
+      id="nextBtn"
+      class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-transparent text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600 focus:outline-none"
+      aria-label="Next testimonial"
+    >›</button>
+  </div>
+</section>
+
+<script>
+  const testimonials = [
+    {
+      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      name: "Nandini K",
+      text: "Amazing team and quality work!"
+    },
+    {
+      img: "https://randomuser.me/api/portraits/women/68.jpg",
+      name: "Ashne B",
+      text: "Creative and collaborative process."
+    },
+    {
+      img: "https://randomuser.me/api/portraits/men/32.jpg",
+      name: "Steven T",
+      text: "Reliable and fast turnaround."
+    },
+    {
+      img: "https://randomuser.me/api/portraits/women/55.jpg",
+      name: "Sara B",
+      text: "Great results for our campaign."
+    }
+  ];
+
+  const slider1 = document.getElementById('testimonial-slider');
+
+  // Helper function to create testimonial HTML
+  function createTestimonial({ img, name, text }) {
+    const div = document.createElement('div');
+    div.className = 'flex-shrink-0 w-full md:w-1/4 px-4';
+    div.innerHTML = `
+      <div class="bg-white p-6 shadow rounded-lg flex flex-col items-center text-center">
+        <img src="${img}" alt="${name}" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-400"/>
+        <p class="italic mb-4">"${text}"</p>
+        <div class="text-sm font-semibold text-gray-700">— ${name}</div>
+      </div>
+    `;
+    return div;
+  }
+
+  // Populate slider dynamically
+  testimonials.forEach(t => {
+    slider1.appendChild(createTestimonial(t));
+  });
+
+  // Clone all testimonials to simulate infinite loop
+  testimonials.forEach(t => {
+    slider1.appendChild(createTestimonial(t));
+  });
+
+  let scrollPosition = 0;
+  let speed = 0.5; // pixels per frame
+
+  const slideWidth = slider1.children[0].getBoundingClientRect().width + 32; // slide width including padding
+
+  // Animate function using requestAnimationFrame for smooth infinite scroll
+  function animate() {
+    scrollPosition += speed;
+
+    if (scrollPosition >= slider1.scrollWidth / 2) {
+      // Reset scroll to start when half (original slides) passed
+      scrollPosition = 0;
+    }
+
+    slider1.style.transform = `translateX(-${scrollPosition}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  // Start animation
+  animate();
+
+  // Optional: Buttons to manually scroll left/right
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  prevBtn.addEventListener('click', () => {
+    scrollPosition -= slideWidth;
+    if (scrollPosition < 0) scrollPosition = slider.scrollWidth / 2 - slideWidth;
+    slider.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+
+  nextBtn.addEventListener('click', () => {
+    scrollPosition += slideWidth;
+    if (scrollPosition >= slider1.scrollWidth / 2) scrollPosition = 0;
+    slider.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+</script>
+
+  <!-- FAQ -->
+  <section class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6 text-center">Have More Questions?</h2>
+    <div class="space-y-4">
+      <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">How long does a typical video project take?</summary>
+        <p class="mt-2">It depends on scope, but usually 2-4 weeks.</p>
+      </details>
+      <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">Will the video work on all our channels?</summary>
+        <p class="mt-2">Yes, we deliver in multiple formats.</p>
+      </details>
+      <!-- Add more FAQs -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-teal-900 text-white py-10 px-6 bg-green" style="background:green !important;">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <div>
+        <img src="logo.png" alt="Blue Dot" class="w-40 mb-4">
+        <p>mail@thebluedot.com.au</p>
+        <p>+61 (0)449 249 092</p>
+        <p>17A Careel Bay Crescent, Avalon Beach, 2107, NSW</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-2">Our Services</h4>
+        <ul class="space-y-1">
+          <li>Brand Videos</li>
+          <li>Social Media</li>
+          <li>Testimonials</li>
+          <li>Tutorials</li>
+          <li>Explainer Videos</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-2">Find Out More</h4>
+        <ul class="space-y-1">
+          <li>About Us</li>
+          <li>Our Storytellers</li>
+          <li>4Good Work</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm mt-10">© 2025 Blue Dot Productions. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+  new Swiper('.swiper-container', {
+  slidesPerView: 4,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  breakpoints: {
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 4 },
+  },
+});
+
+  </script>
+</body>
+</html>
