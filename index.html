@@ -86,24 +86,22 @@
 
     <!-- Video on the left -->
     <div class="w-full md:w-1/2">
-      <video class="w-full rounded shadow" controls>
-        <source src="your-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <h2 class="text-6xl font-bold mb-6 text-center md:text-left">Why Businesses Choose Us?</h2>
+  <div class="mt-6 text-center md:text-left">
+        <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600">Contact us now</a>
+      </div>
     </div>
+
 
     <!-- Content on the right -->
     <div class="w-full md:w-1/2">
-      <h2 class="text-3xl font-bold mb-6 text-center md:text-left">Why Businesses Choose Us?</h2>
       <ul class="list-disc list-inside space-y-4">
         <li><strong>Everything in One Place:</strong> Strategy, scripting, filming, and editing.</li>
         <li><strong>Clear, Honest Storytelling:</strong> No over-the-top jargon.</li>
         <li><strong>Strategic Design:</strong> Tailored content for results.</li>
         <li><strong>Good Value, Real Results:</strong> High-quality, cost-effective content.</li>
       </ul>
-      <div class="mt-6 text-center md:text-left">
-        <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600">Contact us now</a>
-      </div>
+
     </div>
 
   </div>
@@ -131,6 +129,28 @@
       </div>
     </div>
   </section>
+  <script>
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    speed: 5000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    freeMode: true,
+    freeModeMomentum: false,
+    loop: false, // 👈 Important: turn off loop
+    grabCursor: true,
+    breakpoints: {
+      320: { slidesPerView: 2 },
+      640: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 },
+    }
+  });
+</script>
+
 <style>
   /* Container to show exactly 4 boxes */
   #slider {
@@ -267,40 +287,36 @@ setInterval(slideStep, 4000); // slower slide every 4 seconds
     <a href="#contact" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Book a FREE session now</a>
   </section>
 
-  <section class="py-16 bg-gray-50 px-6 max-w-5xl mx-auto">
-  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
-      <!-- Left Video -->
-      <div class="w-full lg:w-1/2">
-        <iframe src="https://player.vimeo.com/video/820362994?h=0556bcdcdc" width="100%" height="300" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<section class="relative">
+  <!-- Background Banner Shape -->
+  <div class="absolute inset-0 h-64 bg-blue-100 z-0" style="clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);"></div>
+
+  <!-- Main Content with z-index to float above background -->
+  <div class="relative z-10 py-20 px-6 max-w-7xl mx-auto">
+    <!-- Rating Header -->
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center gap-2 text-3xl font-bold text-yellow-500">
+        <span>5.0</span>
+        <div class="flex">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
       </div>
-      <!-- Right Text -->
-      <div class="w-full lg:w-1/2">
-        <h2 class="text-3xl font-bold text-pink-300 mb-4">What do our clients say?</h2>
-        <p class="text-lg italic mb-2">“It's the most successful campaign for many years, our ads are standing out globally.”</p>
-        <p class="text-base font-semibold">Nick Street | Commercial Director | O’Brien</p>
-      </div>
+      <p class="mt-2 text-lg text-gray-700 font-medium">
+        powered by
+        <span class="text-[22px] font-bold text-[#4285F4]">G</span><span class="text-[22px] font-bold text-[#EA4335]">o</span><span class="text-[22px] font-bold text-[#FBBC05]">o</span><span class="text-[22px] font-bold text-[#4285F4]">g</span><span class="text-[22px] font-bold text-[#34A853]">l</span><span class="text-[22px] font-bold text-[#EA4335]">e</span>
+      </p>
     </div>
 
-  <div class="relative overflow-hidden">
-    <div
-      id="testimonial-slider"
-      class="flex transition-transform duration-500 ease-in-out"
-      style="will-change: transform;"
-    >
-      <!-- Testimonials will be injected here by JS -->
-    </div>
+    <!-- Carousel Container -->
+    <div class="relative overflow-hidden">
+      <div id="testimonial-slider" class="flex transition-transform duration-500 ease-in-out space-x-4 px-4">
+        <!-- Slides will be added by JavaScript -->
+      </div>
 
-    <!-- Navigation Arrows -->
-    <button
-      id="prevBtn"
-      class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-transparent text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600 focus:outline-none"
-      aria-label="Previous testimonial"
-    >‹</button>
-    <button
-      id="nextBtn"
-      class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-transparent text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600 focus:outline-none"
-      aria-label="Next testimonial"
-    >›</button>
+      <!-- Arrows -->
+      <button id="prevBtn" class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-gray-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600">‹</button>
+      <button id="nextBtn" class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-gray-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-600">›</button>
+    </div>
   </div>
 </section>
 
@@ -308,87 +324,76 @@ setInterval(slideStep, 4000); // slower slide every 4 seconds
   const testimonials = [
     {
       img: "https://randomuser.me/api/portraits/women/44.jpg",
-      name: "Nandini K",
-      text: "Amazing team and quality work!"
+      name: "Nandini Katragadda",
+      date: "20 December 2023",
+      text: "Thank you to the team at Two Giraffes for helping us with our Animated Mix - Brand Showreel. It has been great to work with T..."
     },
     {
       img: "https://randomuser.me/api/portraits/women/68.jpg",
-      name: "Ashne B",
-      text: "Creative and collaborative process."
+      name: "Ashna Basu",
+      date: "17 December 2023",
+      text: "We had an amazing experience working with the incredible Two Giraffes team for an animated video wedding invitation! The..."
     },
     {
       img: "https://randomuser.me/api/portraits/men/32.jpg",
-      name: "Steven T",
-      text: "Reliable and fast turnaround."
+      name: "Steven Tsang",
+      date: "24 August 2023",
+      text: "I'm always impressed with the Two Giraffes' work. Across multiple video projects, their work has consistently met..."
     },
     {
       img: "https://randomuser.me/api/portraits/women/55.jpg",
-      name: "Sara B",
-      text: "Great results for our campaign."
+      name: "Sara Berry",
+      date: "16 December 2022",
+      text: "Thanks Team Two Giraffes and particularly Suzanne for helping us to create an amazing video for our client TfNSW. A complex bri..."
     }
   ];
 
   const slider1 = document.getElementById('testimonial-slider');
 
-  // Helper function to create testimonial HTML
-  function createTestimonial({ img, name, text }) {
+  function createTestimonial({ img, name, date, text }) {
     const div = document.createElement('div');
-    div.className = 'flex-shrink-0 w-full md:w-1/4 px-4';
+    div.className = 'flex-shrink-0 w-full md:w-1/4 bg-white shadow rounded-xl p-6 relative';
     div.innerHTML = `
-      <div class="bg-white p-6 shadow rounded-lg flex flex-col items-center text-center">
-        <img src="${img}" alt="${name}" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-400"/>
-        <p class="italic mb-4">"${text}"</p>
-        <div class="text-sm font-semibold text-gray-700">— ${name}</div>
+      <div class="mb-2 flex items-center gap-2 text-yellow-500 text-sm">
+        ★★★★★ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" class="w-4 h-4 ml-2"/>
+      </div>
+      <p class="text-gray-700 text-sm mb-3">${text}</p>
+      <div class="flex items-center gap-3 mt-4">
+        <img src="${img}" class="w-8 h-8 rounded-full"/>
+        <div>
+          <p class="text-sm font-semibold">${name}</p>
+          <p class="text-xs text-gray-500">${date}</p>
+        </div>
       </div>
     `;
     return div;
   }
 
-  // Populate slider dynamically
-  testimonials.forEach(t => {
-    slider1.appendChild(createTestimonial(t));
-  });
-
-  // Clone all testimonials to simulate infinite loop
-  testimonials.forEach(t => {
-    slider1.appendChild(createTestimonial(t));
-  });
+  [...testimonials, ...testimonials].forEach(t => slider1.appendChild(createTestimonial(t)));
 
   let scrollPosition = 0;
-  let speed = 0.5; // pixels per frame
+  const slideWidth = 320;
+  const maxScroll = (testimonials.length * slideWidth);
 
-  const slideWidth = slider1.children[0].getBoundingClientRect().width + 32; // slide width including padding
-
-  // Animate function using requestAnimationFrame for smooth infinite scroll
-  function animate() {
-    scrollPosition += speed;
-
-    if (scrollPosition >= slider1.scrollWidth / 2) {
-      // Reset scroll to start when half (original slides) passed
-      scrollPosition = 0;
-    }
-
+  function animateSlider() {
+    scrollPosition += 0.5;
+    if (scrollPosition >= maxScroll) scrollPosition = 0;
     slider1.style.transform = `translateX(-${scrollPosition}px)`;
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateSlider);
   }
 
-  // Start animation
-  animate();
+  animateSlider();
 
-  // Optional: Buttons to manually scroll left/right
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  prevBtn.addEventListener('click', () => {
+  document.getElementById('prevBtn').addEventListener('click', () => {
     scrollPosition -= slideWidth;
-    if (scrollPosition < 0) scrollPosition = slider.scrollWidth / 2 - slideWidth;
-    slider.style.transform = `translateX(-${scrollPosition}px)`;
+    if (scrollPosition < 0) scrollPosition = maxScroll - slideWidth;
+    slider1.style.transform = `translateX(-${scrollPosition}px)`;
   });
 
-  nextBtn.addEventListener('click', () => {
+  document.getElementById('nextBtn').addEventListener('click', () => {
     scrollPosition += slideWidth;
-    if (scrollPosition >= slider1.scrollWidth / 2) scrollPosition = 0;
-    slider.style.transform = `translateX(-${scrollPosition}px)`;
+    if (scrollPosition >= maxScroll) scrollPosition = 0;
+    slider1.style.transform = `translateX(-${scrollPosition}px)`;
   });
 </script>
 
@@ -397,12 +402,46 @@ setInterval(slideStep, 4000); // slower slide every 4 seconds
     <h2 class="text-2xl font-bold mb-6 text-center">Have More Questions?</h2>
     <div class="space-y-4">
       <details class="border p-4">
-        <summary class="font-semibold cursor-pointer">How long does a typical video project take?</summary>
-        <p class="mt-2">It depends on scope, but usually 2-4 weeks.</p>
+        <summary class="font-semibold cursor-pointer">How long does a typical video project take?
+</summary>
+        <p class="mt-2">Most projects move from kickoff to final delivery in two to six weeks, depending on
+complexity and feedback speed.
+</p>
+      </details>
+      <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">How do we work out the budget?
+</summary>
+        <p class="mt-2">After a quick discovery call, we scope your needs and provide a fixed, itemised quote—so
+you know exactly what’s included before we start.</p>
+      </details>
+         <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">We’re not sure what story to tell—can you help with ideas and scripting?</summary>
+        <p class="mt-2"> Absolutely. Our team handles concept development and scriptwriting, turning your goals and
+raw information into a clear, engaging storyline before the cameras roll.</p>
       </details>
       <details class="border p-4">
         <summary class="font-semibold cursor-pointer">Will the video work on all our channels?</summary>
-        <p class="mt-2">Yes, we deliver in multiple formats.</p>
+        <p class="mt-2">Yes. We supply platform-ready versions—horizontal, square, vertical, plus captions—so you
+can post straight to your website, socials, email, and more.
+</p>
+      </details>
+         <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">How involved do we need to be day-to-day?
+</summary>
+        <p class="mt-2">You decide. We manage the project end-to-end, with clear checkpoints for your approvals.
+That keeps you in control without eating up your calendar.</p>
+      </details>
+      <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">Can we request changes after we see the first cut?
+</summary>
+        <p class="mt-2">Absolutely. Every project includes two revision rounds at no extra charge. Need tweaks
+later? We archive all footage, making updates quick and straightforward.</p>
+      </details>
+       <details class="border p-4">
+        <summary class="font-semibold cursor-pointer">Who owns the final video and raw footage?
+</summary>
+        <p class="mt-2">You do. We grant you full usage rights for all deliverables, and we keep the raw files safely
+stored for 12 months in case you want extra edits down the track</p>
       </details>
       <!-- Add more FAQs -->
     </div>
@@ -440,20 +479,6 @@ setInterval(slideStep, 4000); // slower slide every 4 seconds
     <div class="text-center text-sm mt-10">© 2025 Blue Dot Productions. All Rights Reserved.</div>
   </footer>
 
-  <script>
-  new Swiper('.swiper-container', {
-  slidesPerView: 4,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-  },
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    1024: { slidesPerView: 4 },
-  },
-});
 
-  </script>
 </body>
 </html>
